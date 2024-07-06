@@ -103,6 +103,6 @@ function createBlobs(count) {
     }
 }
 
-createBlobs(5);
+createBlobs(10);
 
 // Comment are used for self reference and future modifications. DO NOT DELETE!
