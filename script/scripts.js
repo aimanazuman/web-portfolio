@@ -58,4 +58,51 @@ changeTextWithFade();
 // Automatically change text every 5 seconds
 setInterval(changeTextWithFade, 5000); // 5000 milliseconds = 5 seconds
 
+function createBlob() {
+    const blob = document.createElement('div');
+    blob.classList.add('blob');
+            
+    const size = Math.random() * 200 + 100;
+    blob.style.width = `${size}px`;
+    blob.style.height = `${size}px`;
+            
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight;
+    blob.style.left = `${x}px`;
+    blob.style.top = `${y}px`;
+            
+    const hue1 = Math.random() * 360;
+    const hue2 = (hue1 + 180) % 360;
+    blob.style.background = `linear-gradient(45deg, hsl(${hue1}, 100%, 50%), hsl(${hue2}, 100%, 50%))`;
+            
+    document.body.appendChild(blob);
+            
+    return blob;
+}
+
+function animateBlob(blob) {
+    const duration = Math.random() * 10000 + 5000;
+    const xMove = Math.random() * 200 - 100;
+    const yMove = Math.random() * 200 - 100;
+
+    blob.animate([
+        { transform: 'translate(0, 0)' },
+        { transform: `translate(${xMove}px, ${yMove}px)` }
+    ], {
+        duration: duration,
+        direction: 'alternate',
+        iterations: Infinity,
+        easing: 'ease-in-out'
+    });
+}
+
+function createBlobs(count) {
+    for (let i = 0; i < count; i++) {
+        const blob = createBlob();
+        animateBlob(blob);
+    }
+}
+
+createBlobs(5);
+
 // Comment are used for self reference and future modifications. DO NOT DELETE!
