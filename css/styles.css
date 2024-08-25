@@ -13,66 +13,6 @@
     --text-color: #000000;
 }
 
-/* Blob styles and animations */
-.blob-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
-}
-
-.blob {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(40px);
-    opacity: 0.7;
-}
-
-.blob:nth-child(1) {
-    width: 300px;
-    height: 300px;
-    left: -150px;
-    top: -150px;
-    background: linear-gradient(45deg, #ff6b6b, #feca57);
-    animation: blob-move-1 20s infinite alternate;
-}
-
-.blob:nth-child(2) {
-    width: 350px;
-    height: 350px;
-    right: -175px;
-    top: 30%;
-    background: linear-gradient(45deg, #48dbfb, #ff9ff3);
-    animation: blob-move-2 25s infinite alternate;
-}
-
-.blob:nth-child(3) {
-    width: 250px;
-    height: 250px;
-    left: 20%;
-    bottom: -125px;
-    background: linear-gradient(45deg, #54a0ff, #5f27cd);
-    animation: blob-move-3 22s infinite alternate;
-}
-
-@keyframes blob-move-1 {
-    0% { transform: translate(0, 0) rotate(0deg); }
-    100% { transform: translate(100px, 100px) rotate(360deg); }
-}
-
-@keyframes blob-move-2 {
-    0% { transform: translate(0, 0) rotate(0deg); }
-    100% { transform: translate(-100px, 100px) rotate(-360deg); }
-}
-
-@keyframes blob-move-3 {
-    0% { transform: translate(0, 0) rotate(0deg); }
-    100% { transform: translate(100px, -100px) rotate(360deg); }
-}
-
 body {
     display: block;
     margin: 0;
@@ -409,7 +349,7 @@ footer,
 
 /* Adjust content box sizes for responsiveness */
 @media screen and (max-width: 600px) {
-    /* Your existing mobile styles */
+    
     .content-container {
         display: block;
         /* Switch to a single column layout */
@@ -454,26 +394,5 @@ footer,
 
     .contact-info a {
         margin: 5px 5px;
-    }
-
-    /* Adjust blob sizes for mobile */
-    .blob:nth-child(1) {
-        width: 200px;
-        height: 200px;
-        left: -100px;
-        top: -100px;
-    }
-
-    .blob:nth-child(2) {
-        width: 250px;
-        height: 250px;
-        right: -125px;
-    }
-
-    .blob:nth-child(3) {
-        width: 180px;
-        height: 180px;
-        left: 10%;
-        bottom: -90px;
     }
 }
