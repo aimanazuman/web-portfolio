@@ -58,6 +58,7 @@ changeTextWithFade();
 // Automatically change text every 5 seconds
 setInterval(changeTextWithFade, 5000); // 5000 milliseconds = 5 seconds
 
+<<<<<<< HEAD
 function createBlob() {
     const blob = document.createElement('div');
     blob.classList.add('blob');
@@ -106,3 +107,6 @@ function createBlobs(count) {
 createBlobs(10);
 
 // Comment are used for self reference and future modifications. DO NOT DELETE!
+=======
+// Comment are used for self reference and future modifications. DO NOT DELETE!
+>>>>>>> parent of 2943715 (Added blob animation to scripts.js)
